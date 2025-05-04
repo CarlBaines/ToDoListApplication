@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>To-Do List</title>
+        <link rel = "stylesheet" href = "css/style.css">
+        <link rel = "icon" href = "assets/to-do-list-icon.png" type = "image/png">
+    </head>
+    <body>
+        <div class="container">
+            <div class = "to-do">
+                <h1>To-Do List<img src = "assets/to-do-list-icon.png" alt = "checkmark icon" class = "icon"></h1>
+                <h2 id = "datetime"></h2>
+                <div class = "input-container">
+                    <input type = "text" id = "user-input" placeholder = "Add a new task...">
+                    <button onclick = "addTask()">Add</button>
+                </div>
+                <ul id = "task-list">
+                    <!--<li class = "checked">Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li> -->
+                </ul>
+
+            </div>
+            <div class = "footer">
+                <p>Created by Carl Baines</p>
+            </div>
+        <script src = "js/script.js"></script>
+    </body>
+</html>
