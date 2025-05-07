@@ -83,7 +83,7 @@ ul li:before{
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    background: url(/assets/unchecked-checkbox-icon.jpg);
+    background: url(../assets/unchecked-checkbox-icon.jpg);
     background-size: cover;
     background-position: center;
     top: 10px;
@@ -94,7 +94,7 @@ ul li.checked{
     text-decoration: line-through;
 }
 ul li.checked:before{
-    background: url(/assets/to-do-list-icon.png);
+    background: url(../assets/to-do-list-icon.png);
     background-size: cover;
     background-position: center;
 }
