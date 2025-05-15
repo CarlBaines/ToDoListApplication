@@ -37,7 +37,8 @@
     color: black;
     display: flex;
     align-items: center;
-    margin-left: 28px;
+    justify-content: center;
+    text-decoration: underline;
     margin-bottom: 20px;
 }
 .to-do h1 img{
@@ -50,7 +51,7 @@
     color: black;
     font-family: poppins, sans-serif;
     font-size: 18px;
-    margin-left: 28px;
+    text-align: center;
     margin-bottom: 20px;
 }
 .input-container{
@@ -130,4 +131,76 @@ ul li span{
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.footer a{
+    color: #fff;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .to-do {
+        width: 90%;
+        margin: 50px auto 20px;
+        padding: 30px 20px 50px;
+    }
+
+    .to-do h1 {
+        font-size: 24px;
+        margin-left: 15px;
+    }
+
+    .to-do h1 img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .input-container {
+        padding-left: 15px;
+    }
+
+    button {
+        padding: 12px 30px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .to-do {
+        width: 95%;
+        margin: 30px auto 20px;
+        padding: 20px 15px 40px;
+        border-radius: 25px;
+    }
+
+    .to-do h1 {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .to-do h1 img {
+        width: 30px;
+        height: 30px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 11px;
+    }
+
+    ul li {
+        font-size: 14px;
+        padding: 10px 8px 10px 40px;
+    }
+
+    ul li:before {
+        height: 24px;
+        width: 24px;
+        top: 8px;
+        left: 10px;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
 }
