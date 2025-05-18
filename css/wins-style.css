@@ -1,0 +1,167 @@
+@import 'common.css';
+
+@font-face{
+    font-family: 'Poppins';
+    font-weight: 700;
+    src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Poppins';
+    font-weight: 400;
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.navbar{
+    width: 100%;
+    height: 70px;
+    background: #212330;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 2px solid white;
+}
+
+.navbar-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo img{
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+}
+
+.nav-logo:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: #212330;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.container h1{
+    color: black;
+    font-weight: 700;
+    font-size: 32px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.wins-container{
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    padding: 100px 30px 70px;
+    border-radius: 45px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #212330;
+    outline: none;
+    font-size: 16px;
+}
+
+input::placeholder,
+input[type="date"] {
+    color: #757575;
+}
+
+button{
+    border: #212330 3px solid;
+    outline: none;
+    padding: 16px 50px;
+    background: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.wins-list {
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 45px;
+}
+
+.wins-list h1{
+    color: white;
+    font-style: normal;
+    display: none;  /* Hide initially */
+}
+
+.wins-list ul {
+    list-style: none;
+}
+
+.wins-list li {
+    font-weight: 700;
+    color: white;
+    padding: 12px 8px;
+    font-size: 16px;
+    border-bottom: 3px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wins-list .date {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer{
+    width: 100%;
+    height: 70px;
+    background: #212330;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid white;
+}
+
+.footer p{
+    color: white;
+    font-weight: 700;
+}
+
+.footer a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    text-transform: uppercase;
+}

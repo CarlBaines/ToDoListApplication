@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wins</title>
+    <link rel="stylesheet" href="../css/wins-style.css">
+    <link rel="icon" href="../assets/to-do-list-icon.png" type="image/png">
+</head>
+
+<body>
+    <nav class = "navbar">
+        <div class = "navbar-items">
+            <div class = "nav-logo">
+                <a href = "../index.html"><img src = "../assets/white-to-do-list-icon.png" alt = "checkmark icon" class = "icon"></a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class = "wins-container">
+            <h1>CELEBRATE THE SMALL WINS 🥳</h1>
+            <div class = "input-container">
+                <input type="text" id="user-input" placeholder="Add a new win...">
+                <input type="date" id="date-input">
+                <button onclick="addWin()">Add Win</button>
+            </div>
+        </div>
+        <div class = "wins-list">
+            <h1>Your Wins</h1>
+            <ul id="win-list">
+                <!-- <li>Win 1</li>
+                <li>Win 2</li>
+                <li>Win 3</li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Created by Carl Baines |<a href="https://github.com/CarlBaines" target="_blank"> Github</a></p>
+    </div>
+    <script src = "../js/wins-page.js"></script>
+</body>
+
+</html>

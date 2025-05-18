@@ -1,37 +1,12 @@
-@font-face {
-    font-family: 'Poppins';
-    font-weight: 700;
-    src: url('../fonts/Poppins-Bold.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Poppins';
-    font-weight: 400;
-    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-}
-
-.container{
-    width: 100%;
-    min-height: 100vh;
-    background: #212330;
-    padding: 10px;
-}
+@import 'common.css';
 
 .to-do{
     width: 100%;
     max-width: 600px;
     background: #fff;
-    margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 45px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .to-do h1{
     color: black;
@@ -45,6 +20,19 @@
     width: 50px;
     height: 50px;
     margin-left: 10px;
+}
+
+.navbar-items a{
+    font-weight: 700;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-items a:hover{
+    text-decoration: underline;
+    transform: scale(1.1);  
+    transition: all 0.3s ease-in-out;
 }
 
 .to-do h2{
@@ -81,6 +69,10 @@ button{
     font-weight: 700;
     cursor: pointer;
     border-radius: 30px;
+}
+button:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
 }
 ul li{
     list-style: none;
@@ -136,6 +128,10 @@ ul li span{
 .footer a{
     color: #fff;
     text-decoration: none;
+}
+
+.footer a:hover{
+    text-transform: uppercase;
 }
 
 @media screen and (max-width: 768px) {
