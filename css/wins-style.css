@@ -1,4 +1,4 @@
-@import 'common.css';
+@import 'common.css'; /* imports a common stylesheet which contains styling for common elements used across the website */
 
 @font-face{
     font-family: 'Poppins';
@@ -66,6 +66,13 @@
     text-align: center;
 }
 
+.clear-wins-btn{
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    border: 3px solid black;
+}
+
 .wins-container{
     width: 100%;
     max-width: 800px;
@@ -118,7 +125,7 @@ button{
 .wins-list h1{
     color: white;
     font-style: normal;
-    display: none;  /* Hide initially */
+    display: none;  /* Hide the title initially. I used JavaScript to display the heading upon a win being inputted. */
 }
 
 .wins-list ul {
@@ -164,4 +171,71 @@ button{
 
 .footer a:hover{
     text-transform: uppercase;
+}
+
+/*CSS Media Queries to implement responsiveness*/
+@media screen and (max-width: 768px){
+    .wins-container {
+        width: 90%;
+        margin: 20px;
+        padding: 50px 20px 40px;
+    }
+
+    .input-container {
+        gap: 15px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 12px 30px;
+        font-size: 12px;
+    }
+
+    .wins-list {
+        padding: 20px;
+    }
+
+    .wins-list li {
+        font-size: 14px;
+        padding: 10px 5px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .wins-list .date {
+        font-size: 12px;
+    }
+
+    .container h1 {
+        font-size: 24px;
+        padding-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .wins-container {
+        width: 95%;
+        margin: 10px;
+        padding: 30px 15px;
+        border-radius: 25px;
+    }
+
+    .clear-wins-btn {
+        top: 80px;
+        left: 10px;
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
 }

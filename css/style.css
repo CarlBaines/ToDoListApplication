@@ -1,5 +1,11 @@
-@import 'common.css';
+@import 'common.css'; /* imports a common stylesheet which contains styling for common elements used across the website */
 
+#greetUser{
+    color: white;
+    padding-bottom: 45px;
+    font-size: 45px;
+    text-shadow: 2px 2px black;
+}
 .to-do{
     width: 100%;
     max-width: 600px;
@@ -10,7 +16,7 @@
 }
 .to-do h1{
     color: black;
-    display: flex;
+    display: flex; 
     align-items: center;
     justify-content: center;
     text-decoration: underline;
@@ -114,6 +120,19 @@ ul li span{
     line-height: 40px;
     text-align: center;
 }
+
+.clear-btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.clear-tasks-btn{
+    display: none;
+    padding: 10px 20px;
+}
+
 .footer{
     width: 100%;
     padding: 20px;
@@ -134,6 +153,24 @@ ul li span{
     text-transform: uppercase;
 }
 
+.option{
+    position: fixed;
+    font-weight: 700;
+    color: white;
+    left: 30px;
+    bottom: 20px;
+    text-shadow: 2px 2px black;
+    z-index: 1000;
+}
+
+.option :hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+
+/*CSS Media Queries to implement responsiveness*/
 @media screen and (max-width: 768px) {
     .to-do {
         width: 90%;

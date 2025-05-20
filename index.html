@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
+    <title>To-Do List Application</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/to-do-list-icon.png" type="image/png">
 </head>
@@ -19,11 +19,12 @@
         </div>
     </nav>
     <div class="container">
+        <h1 id = "greetUser">Good [Time of Day], [User]</h1>
         <div class="to-do">
             <h1>To-Do List<img src="assets/to-do-list-icon.png" alt="checkmark icon" class="icon"></h1>
             <h2 id="datetime"></h2>
             <div class="input-container">
-                <input type="text" id="user-input" placeholder="Add a new task...">
+                <input type="text" id="user-input" placeholder="Add a new task..." autocomplete = "off">
                 <button onclick="addTask()">Add</button>
             </div>
             <ul id="task-list">
@@ -31,10 +32,17 @@
                     <li>Task 2</li>
                     <li>Task 3</li> -->
             </ul>
-
+            <div class = "clear-btn-container">
+                <button class = "clear-tasks-btn" onclick="clearTasks()">Clear Tasks</button>
+            </div>
         </div>
         <div class="footer">
             <p>Created by Carl Baines |<a href="https://github.com/CarlBaines" target="_blank"> Github</a></p>
+        </div>
+        <div class = "option">
+            <p>
+                <span class = "nameOption" id = "change-name">Change Name</span>
+            </p>
         </div>
     </div>
     <script src="js/script.js"></script>

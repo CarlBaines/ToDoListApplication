@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wins</title>
+    <title>Wins - To-Do List Application</title>
     <link rel="stylesheet" href="../css/wins-style.css">
     <link rel="icon" href="../assets/to-do-list-icon.png" type="image/png">
 </head>
@@ -18,17 +18,18 @@
         </div>
     </nav>
     <div class="container">
+        <button class = "clear-wins-btn" onclick="clearWins()">Clear Wins</button>
         <div class = "wins-container">
             <h1>CELEBRATE THE SMALL WINS 🥳</h1>
             <div class = "input-container">
-                <input type="text" id="user-input" placeholder="Add a new win...">
+                <input type="text" id="user-input" placeholder="Add a new win..." autocomplete = "off">
                 <input type="date" id="date-input">
                 <button onclick="addWin()">Add Win</button>
             </div>
         </div>
         <div class = "wins-list">
             <h1>Your Wins</h1>
-            <ul id="win-list">
+            <ul id="listings">
                 <!-- <li>Win 1</li>
                 <li>Win 2</li>
                 <li>Win 3</li> -->
