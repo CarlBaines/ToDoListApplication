@@ -34,8 +34,10 @@ function addWin() {
     if(dateText.textContent === "undefined"){
         alert("Enter a date that is not in the past!");
         dateInput.value = "";
-        winsTitle.style.display = "none";
-        clearWinsBtn.style.display = "none";
+        if(winList.children.length === 0){
+            winsTitle.style.display = "none";
+            clearWinsBtn.style.display = "none";
+        }    
     }
     else{
         dateText.className = "date";
