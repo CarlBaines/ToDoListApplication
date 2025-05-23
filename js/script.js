@@ -161,6 +161,15 @@ listContainer.addEventListener("click", function (e) {
     }
 }, false);
 
+// Creates an event listener that checks for when a key has been released in the input field.
+inputField.addEventListener("keyup", function(e){
+    // Checks if the enter key was pressed
+    if(e.key === "Enter"){
+        // Adds the task to the task list.
+        addTask();
+    }
+});
+
 /* Secure Version - validates targets and uses data attributes.
 
 listContainer.addEventListener("click", function(e) {

@@ -30,19 +30,44 @@ function addWin() {
     // Changes their text content.
     winText.textContent = winInput.value;
     dateText.textContent = formatDate(dateInput.value);
-    dateText.className = "date";
+    // Check if the formatDate method returns undefined. If it does, an invalid date has been entered.
+    if(dateText.textContent === "undefined"){
+        alert("Enter a date that is not in the past!");
+        dateInput.value = "";
+        winsTitle.style.display = "none";
+        clearWinsBtn.style.display = "none";
+    }
+    else{
+        dateText.className = "date";
 
-    // Adds the span elements to the list and appends the list to the div.
-    li.appendChild(winText);
-    li.appendChild(dateText);
-    winList.appendChild(li);
+        // Adds the span elements to the list and appends the list to the div.
+        li.appendChild(winText);
+        li.appendChild(dateText);
+        winList.appendChild(li);
 
-    // Clears the input fields.
-    winInput.value = "";
-    dateInput.value = "";
+        // Clears the input fields.
+        winInput.value = "";
+        dateInput.value = "";
 
-    // Saves to local storage.
-    saveData();
+        // Saves to local storage.
+        saveData();
+    }
+}
+
+winInput.addEventListener("keyup", onEnterKey);
+dateInput.addEventListener("keyup", onEnterKey);
+
+function onEnterKey(e){
+    // Check if both win and date inputs have been made if enter key has been pressed
+    if (e.key === "Enter") {
+        if (winInput.value.trim() === "" || dateInput.value.trim() === "") {
+            alert("Please add a win and a date.");
+            return;
+        }
+        else{
+            addWin();
+        }
+    }
 }
 
 /* Secure Version - input sanitisation, structured data and new renderWin method.
@@ -91,12 +116,28 @@ function renderWin(win) {
 
 // Date formatter method
 function formatDate(dateString) {
+    // converts the inputted dateString into a formatted date object.
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-GB', {
+    const convertedDate = date.toLocaleDateString('en-GB', {
         day: 'numeric',
         month: 'short',
         year: 'numeric'
     });
+    // converts the currentDate into a formatted date object for comparison with the inputted date.
+    const currentDate = new Date();
+    const formattedCurrentDate = currentDate.toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric'
+    });
+     // check if convertedDate is behind the current date.
+    if(convertedDate < formattedCurrentDate){
+        // alert statement for debugging.
+        // alert("Enter a date that is not in the past!");
+        return "undefined";
+    }
+    // Else, returns the formatted date.
+    return convertedDate;
 }
 
 
