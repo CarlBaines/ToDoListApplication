@@ -32,7 +32,7 @@ function addWin() {
     dateText.textContent = formatDate(dateInput.value);
     // Check if the formatDate method returns undefined. If it does, an invalid date has been entered.
     if(dateText.textContent === "undefined"){
-        alert("Enter a date that is not in the past!");
+        alert("Enter a date that is not in the future!");
         dateInput.value = "";
         if(winList.children.length === 0){
             winsTitle.style.display = "none";
@@ -132,10 +132,10 @@ function formatDate(dateString) {
         month: 'short',
         year: 'numeric'
     });
-     // check if convertedDate is behind the current date.
-    if(convertedDate < formattedCurrentDate){
+     // check if convertedDate is ahead of the current date.
+    if(convertedDate > formattedCurrentDate){
         // alert statement for debugging.
-        // alert("Enter a date that is not in the past!");
+        // alert("Enter a date that is not in the future!");
         return "undefined";
     }
     // Else, returns the formatted date.
