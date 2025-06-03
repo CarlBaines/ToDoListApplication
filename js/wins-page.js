@@ -120,6 +120,8 @@ function renderWin(win) {
 function formatDate(dateString) {
     // converts the inputted dateString into a formatted date object.
     const date = new Date(dateString);
+    // Bug fix: set the input date to midnight so they can be compared in a normalised fashion.
+    date.setHours(0, 0, 0, 0);
     // Get the current date.
     const currentDate = new Date();
     currentDate.setHours(0, 0, 0, 0);
